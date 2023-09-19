@@ -1,0 +1,323 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Epilogue", sans-serif;
+  background-color: hsl(0, 0%, 98%);
+}
+body .links-mobile-menu {
+  position: fixed;
+  right: -280px;
+  top: 0;
+  width: 280px;
+  height: 100vh;
+  background-color: white;
+  padding: 20px;
+  transition: 0.3s;
+}
+body .links-mobile-menu > i {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  font-size: 35px;
+  cursor: pointer;
+}
+body .links-mobile-menu ul.links {
+  position: absolute;
+  top: 15%;
+  list-style: none;
+}
+body .links-mobile-menu ul.links > li {
+  margin-bottom: 20px;
+  cursor: pointer;
+  color: hsl(0, 0%, 41%);
+  transition: 0.3s;
+}
+body .links-mobile-menu ul.links > li:hover {
+  color: hsl(0, 0%, 8%);
+}
+body .links-mobile-menu ul.links li.features {
+  position: relative;
+}
+body .links-mobile-menu ul.links li.features > img {
+  margin: 0 0 1px 5px;
+}
+body .links-mobile-menu ul.links li.features .features-links {
+  list-style: none;
+  margin: 15px 20px;
+  display: none;
+}
+body .links-mobile-menu ul.links li.features .features-links li {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  margin: 10px 0;
+}
+body .links-mobile-menu ul.links li.features .features-links li img {
+  margin-right: 8px;
+}
+body .links-mobile-menu ul.links li.company {
+  position: relative;
+}
+body .links-mobile-menu ul.links li.company > img {
+  margin: 0 0 1px 5px;
+}
+body .links-mobile-menu ul.links li.company .company-links {
+  list-style: none;
+  margin: 15px 20px;
+  display: none;
+}
+body .links-mobile-menu ul.links li.company .company-links li {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  margin: 10px 0;
+}
+body .links-mobile-menu ul.links li.company .company-links li img {
+  margin-right: 8px;
+}
+body .links-mobile-menu .btns {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  bottom: 12%;
+  width: 85%;
+}
+body .links-mobile-menu .btns button {
+  padding: 10px;
+  margin-bottom: 6px;
+  background-color: transparent;
+  color: hsl(0, 0%, 41%);
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+}
+body .links-mobile-menu .btns .login {
+  border: none;
+}
+body .links-mobile-menu .btns .register {
+  border: 1px solid hsl(0, 0%, 41%);
+  border-radius: 10px;
+  transition: 0.3s;
+}
+body .links-mobile-menu .btns .register:hover {
+  background-color: hsl(0, 0%, 41%);
+  color: hsl(0, 0%, 98%);
+}
+body .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-color: hsla(0, 0%, 8%, 0.5);
+  top: 0;
+  left: 0;
+  display: none;
+  z-index: -1;
+}
+body header {
+  width: 95%;
+  margin: auto;
+  padding: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body header .bar-icon {
+  font-size: 27px;
+  cursor: pointer;
+  color: hsl(0, 0%, 41%);
+  display: none;
+}
+body header ul.links {
+  display: flex;
+  margin-right: auto;
+  margin-left: 50px;
+  list-style: none;
+}
+body header ul.links > li {
+  margin-right: 35px;
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+  color: hsl(0, 0%, 41%);
+  transition: 0.3s;
+  cursor: pointer;
+}
+body header ul.links > li:hover {
+  color: hsl(0, 0%, 8%);
+}
+body header ul.links > li > img {
+  margin-left: 7px;
+}
+body header ul.links > li.features {
+  position: relative;
+}
+body header ul.links > li.features ul.features-links {
+  display: none;
+  position: absolute;
+  list-style: none;
+  top: 40px;
+  right: 0;
+  width: 150px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+body header ul.links > li.features ul.features-links li {
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+}
+body header ul.links > li.features ul.features-links li img {
+  margin-right: 10px;
+}
+body header ul.links > li.features ul.features-links li:not(:last-child) {
+  margin-bottom: 18px;
+}
+body header ul.links > li.company {
+  position: relative;
+}
+body header ul.links > li.company ul.company-links {
+  display: none;
+  position: absolute;
+  list-style: none;
+  top: 40px;
+  left: 0;
+  width: 150px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+body header ul.links > li.company ul.company-links li {
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+}
+body header ul.links > li.company ul.company-links li img {
+  margin-right: 10px;
+}
+body header ul.links > li.company ul.company-links li:not(:last-child) {
+  margin-bottom: 18px;
+}
+body header .btns button {
+  padding: 12px 22px;
+  font-size: 14px;
+  color: hsl(0, 0%, 41%);
+  font-weight: 700;
+  transition: 0.3s;
+  cursor: pointer;
+}
+body header .btns button:hover {
+  color: hsl(0, 0%, 8%);
+  border-color: hsl(0, 0%, 8%);
+}
+body header .btns .login {
+  margin-right: 8px;
+  border: none;
+  background-color: transparent;
+}
+body header .btns .register {
+  border: 2px solid hsl(0, 0%, 41%);
+  background-color: transparent;
+  border-radius: 10px;
+}
+body .landing {
+  width: 80%;
+  margin: 40px auto;
+  display: flex;
+  align-items: flex-start;
+}
+body .landing .information {
+  flex: 1;
+  padding: 90px 140px 0 0;
+}
+body .landing .information h1 {
+  font-size: 70px;
+  color: hsl(0, 0%, 8%);
+}
+body .landing .information p {
+  margin: 40px 0;
+  color: hsl(0, 0%, 41%);
+  line-height: 1.5;
+}
+body .landing .information button {
+  padding: 16px 32px;
+  border: none;
+  background-color: hsl(0, 0%, 8%);
+  color: hsl(0, 0%, 98%);
+  border-radius: 10px;
+  font-weight: bold;
+  border: 2px solid hsl(0, 0%, 8%);
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+body .landing .information button:hover {
+  background-color: transparent;
+  color: hsl(0, 0%, 8%);
+}
+body .landing .information .ads {
+  margin-top: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body .landing .image {
+  flex: 1;
+}
+body .landing .image img {
+  max-width: 100%;
+}
+
+.show {
+  display: block !important;
+  animation-name: move;
+  animation-duration: 0.2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes move {
+  0% {
+    top: 60px;
+  }
+  100% {
+    top: 40px;
+  }
+}
+@media (max-width: 900px) {
+  body header .bar-icon {
+    display: block;
+  }
+  body header .btns {
+    display: none;
+  }
+  body header ul.links {
+    display: none;
+  }
+  body .landing {
+    flex-direction: column-reverse;
+    width: 100% !important;
+  }
+  body .landing .information {
+    padding: 30px 15px !important;
+    text-align: center;
+  }
+  body .landing .information h1 {
+    font-size: 32px !important;
+  }
+  body .landing .information p {
+    margin: 20px 15px !important;
+  }
+  body .landing .information .ads {
+    margin-top: 40px !important;
+  }
+  body .landing .information .ads img {
+    width: 70px;
+  }
+}/*# sourceMappingURL=style.css.map */
